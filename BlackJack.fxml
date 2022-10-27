@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane hgap="8.0" prefHeight="400.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tipcalculator.BlackJackController">
+  <columnConstraints>
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="151.5" minWidth="10.0" prefWidth="131.3999755859375" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.5" minWidth="10.0" prefWidth="81.8000244140625" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.5" minWidth="10.0" prefWidth="79.99996337890627" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.5" minWidth="10.0" prefWidth="76.80003662109374" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.5" minWidth="10.0" prefWidth="75.00003662109373" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.5" minWidth="10.0" prefWidth="96.79999999999995" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="128.0" minHeight="0.0" prefHeight="34.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="319.0" minHeight="1.0" prefHeight="25.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="244.0" minHeight="5.0" prefHeight="118.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="250.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="250.0" minHeight="10.0" prefHeight="119.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="250.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label prefHeight="28.0" prefWidth="84.0" text="Bet (in dollars)" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+      <Label text="Total Money" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+      <TextField fx:id="betTextField" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+      <TextField fx:id="totalTextField" editable="false" focusTraversable="false" text="1,000" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+      <Label text="Dealer POV" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#standingButtonPressed" text="Stand" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+      <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#hitButtonPressed" text="Hit" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+      <Label text="Player POV" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+      <Button mnemonicParsing="false" onAction="#playButtonPressed" text="Play" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <ImageView fx:id="firstDealerImage" fitHeight="120.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <children>
+            <ImageView fx:id="secondDealerImage" fitHeight="119.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+         <children>
+            <ImageView fx:id="thirdDealerImage" fitHeight="118.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <children>
+            <ImageView fx:id="firstPlayerImage" fitHeight="121.0" fitWidth="103.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <children>
+            <ImageView fx:id="secondPlayerImage" fitHeight="119.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+         <children>
+            <ImageView fx:id="thirdPlayerImage" fitHeight="119.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="134.0" prefWidth="65.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+         <children>
+            <ImageView fx:id="fourthDealerImage" fitHeight="122.0" fitWidth="95.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="109.0" prefWidth="90.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+         <children>
+            <ImageView fx:id="fourthPlayerImage" fitHeight="119.0" fitWidth="92.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <TextArea fx:id="gameinfo" editable="false" focusTraversable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+   </children>
+   <padding>
+      <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+   </padding>
+</GridPane>
